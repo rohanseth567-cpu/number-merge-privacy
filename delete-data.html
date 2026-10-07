@@ -1,223 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Number Merge - Data Deletion Request</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
-            line-height: 1.7;
-        }
-
-        .header {
-            background: linear-gradient(135deg, #1a0a2e 0%, #2d1b4e 50%, #4a2070 100%);
-            color: #fff;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .header h1 {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 6px;
-        }
-
-        .header p {
-            font-size: 14px;
-            opacity: 0.85;
-        }
-
-        .container {
-            max-width: 760px;
-            margin: 0 auto;
-            padding: 32px 20px 60px;
-        }
-
-        h2 {
-            font-size: 20px;
-            font-weight: 700;
-            color: #1a0a2e;
-            margin-top: 32px;
-            margin-bottom: 12px;
-        }
-
-        p {
-            margin-bottom: 14px;
-            font-size: 15px;
-            color: #444;
-        }
-
-        .step-box {
-            background: #fff;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            padding: 20px 24px;
-            margin-bottom: 16px;
-        }
-
-        .step-box h3 {
-            font-size: 16px;
-            font-weight: 700;
-            color: #1a0a2e;
-            margin-bottom: 8px;
-        }
-
-        .step-box p {
-            margin-bottom: 8px;
-            font-size: 14px;
-        }
-
-        .step-number {
-            display: inline-block;
-            background: #5a2d90;
-            color: #fff;
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 28px;
-            font-size: 14px;
-            font-weight: 700;
-            margin-right: 10px;
-            vertical-align: middle;
-        }
-
-        .step-list {
-            margin: 10px 0 6px 20px;
-            font-size: 14px;
-            color: #555;
-        }
-
-        .step-list li {
-            margin-bottom: 4px;
-        }
-
-        .info-box {
-            background: #f0ecf5;
-            border-left: 4px solid #5a2d90;
-            padding: 16px 20px;
-            border-radius: 4px;
-            margin-top: 12px;
-            margin-bottom: 16px;
-        }
-
-        .info-box p {
-            margin-bottom: 4px;
-            font-size: 14px;
-        }
-
-        .contact-box {
-            background: #f0ecf5;
-            border-left: 4px solid #5a2d90;
-            padding: 16px 20px;
-            border-radius: 4px;
-            margin-top: 20px;
-        }
-
-        .contact-box p {
-            margin-bottom: 4px;
-        }
-
-        a {
-            color: #5a2d90;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 24px;
-            font-size: 13px;
-            color: #999;
-            border-top: 1px solid #e0e0e0;
-            max-width: 760px;
-            margin: 0 auto;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pupdoku - Data Deletion Request</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+         background-color: #fbf8f4; color: #333; line-height: 1.7; }
+  .header { background: linear-gradient(135deg, #4a250b 0%, #8f4515 50%, #d9762f 100%);
+            color: #fff; padding: 40px 20px; text-align: center; }
+  .header h1 { font-size: 28px; font-weight: 700; margin-bottom: 6px; }
+  .header p { font-size: 14px; color: #ffffff; opacity: 0.9; }
+  .container { max-width: 760px; margin: 0 auto; padding: 32px 20px 60px; }
+  .effective-date { font-size: 13px; color: #777; margin-bottom: 28px; padding-bottom: 16px; border-bottom: 1px solid #efe4d9; }
+  h2 { font-size: 20px; font-weight: 700; color: #4a250b; margin-top: 32px; margin-bottom: 12px; }
+  p { margin-bottom: 14px; font-size: 15px; color: #444; }
+  ul { margin: 0 0 16px 22px; } li { margin-bottom: 8px; font-size: 15px; color: #444; }
+  ol { margin: 0 0 16px 22px; } ol li { margin-bottom: 8px; font-size: 15px; color: #444; }
+  .box { background: #fbeee2; border: 1px solid #efd9c4; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+  .box p:last-child { margin-bottom: 0; }
+  a { color: #b5531a; font-weight: 600; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .footer { margin-top: 40px; padding-top: 18px; border-top: 1px solid #efe4d9; font-size: 13px; color: #777; }
+</style>
 </head>
 <body>
-
 <div class="header">
-    <h1>Number Merge</h1>
-    <p>Data Deletion Request</p>
+  <h1>Pupdoku</h1>
+  <p>Data Deletion Request</p>
 </div>
 
 <div class="container">
+  <p class="effective-date">Last Updated: October 7, 2026</p>
 
-    <p>We respect your privacy and your right to control your data. Number Merge does not store any personal data on external servers controlled by the developer. All game data is stored locally on your device or managed by Google's services.</p>
+  <p>This page explains how you can request deletion of data associated with your use of the
+     Pupdoku application (previously published as Number Merge), created by Rohan Seth
+     ("Service Provider").</p>
 
-    <p>Below you will find instructions to delete all data associated with Number Merge.</p>
+  <h2>What Data Can Be Deleted</h2>
+  <p>Upon a verified request, the Service Provider will delete the data stored in association with
+     your account on our cloud servers (Google Firebase), which may include:</p>
+  <ul>
+    <li>Your account identifier and the email and display name provided when you signed in</li>
+    <li>Your game progress &mdash; levels completed, Daily Challenge and streak progress, and best times</li>
+    <li>Your hints, reveals and Remove Ads status saved with your account</li>
+    <li>Your profile name, avatar and settings</li>
+  </ul>
+  <p>Local data cached on your device is removed automatically when you uninstall the Application
+     or clear the app's data from your device settings.</p>
 
-    <h2>How to Delete Your Data</h2>
+  <h2>How to Request Deletion</h2>
+  <p>You can delete your data directly in the app at any time. On the Home screen, open
+     <strong>Settings &rarr; Save Progress</strong>, then:</p>
+  <ul>
+    <li><strong>If you are signed in:</strong> tap <strong>Delete account</strong> and confirm. This
+        removes your cloud data, your account and the data on that device immediately.</li>
+    <li><strong>If you are not signed in:</strong> tap <strong>Delete my data</strong> and confirm. This
+        removes the data on that device; nothing is stored in our cloud without signing in.</li>
+  </ul>
+  <p>If you have uninstalled the app or cannot sign in, you can request deletion by email:</p>
+  <div class="box">
+    <p>Email: <a href="mailto:rohanseth567@gmail.com?subject=Pupdoku%20Data%20Deletion%20Request">rohanseth567@gmail.com</a></p>
+    <p>Subject: Pupdoku Data Deletion Request</p>
+  </div>
+  <p>In your email, please include enough information to identify your data (for example, the
+     email address you signed in with). This helps the Service Provider locate and delete the
+     correct records.</p>
 
-    <div class="step-box">
-        <h3><span class="step-number">1</span>Delete Local Game Data</h3>
-        <p>Game progress, scores, theme preferences, and settings are stored locally on your device. To delete this data:</p>
-        <ul class="step-list">
-            <li>Go to <strong>Settings</strong> on your Android device</li>
-            <li>Tap <strong>Apps</strong> (or <strong>Apps &amp; notifications</strong>)</li>
-            <li>Find and tap <strong>Number Merge</strong></li>
-            <li>Tap <strong>Storage &amp; cache</strong></li>
-            <li>Tap <strong>Clear data</strong> and <strong>Clear cache</strong></li>
-        </ul>
-        <p>Alternatively, uninstalling the app will automatically remove all local data.</p>
-    </div>
+  <h2>What Happens Next</h2>
+  <ol>
+    <li>The Service Provider will verify the request to confirm it relates to your data.</li>
+    <li>Your cloud-stored data will be permanently deleted within 30 days after verification.</li>
+    <li>You will receive a confirmation once the deletion is complete.</li>
+  </ol>
 
-    <div class="step-box">
-        <h3><span class="step-number">2</span>Delete Google Play Games Data</h3>
-        <p>If you signed in to Google Play Games, your leaderboard scores are stored by Google. To remove this data:</p>
-        <ul class="step-list">
-            <li>Open the <strong>Google Play Games</strong> app on your device</li>
-            <li>Tap your <strong>profile icon</strong> at the top</li>
-            <li>Tap <strong>Settings</strong></li>
-            <li>Tap <strong>Delete Play Games account &amp; data</strong></li>
-            <li>Select <strong>Number Merge</strong> to delete data for this game only</li>
-        </ul>
-        <p>This will remove your leaderboard scores and Play Games activity for Number Merge.</p>
-    </div>
+  <h2>Important Notes</h2>
+  <ul>
+    <li>Deleting your data removes your saved progress, hints, reveals and other items stored with
+        your account. If you sign in again afterwards, a new empty account is created and your
+        previous progress cannot be recovered.</li>
+    <li>Records of purchases (product, order number, date and account identifier) are retained for
+        support, refund disputes, fraud prevention and legal obligations. If you want these deleted
+        too, say so in your request, and they will be deleted unless the law requires them to be kept.</li>
+    <li>Analytics and crash data are not linked to your name or email, and are deleted automatically:
+        analytics within 14 months, crash reports within 90 days.</li>
+    <li>Purchase transaction records held by Google (as the payment processor), and your Google Play
+        Games profile and leaderboard scores, are subject to Google's own data policies and are managed
+        in your Google account.</li>
+  </ul>
 
-    <div class="step-box">
-        <h3><span class="step-number">3</span>Reset Advertising Data</h3>
-        <p>Number Merge uses Google AdMob for advertisements. To reset or opt out of personalized advertising:</p>
-        <ul class="step-list">
-            <li>Go to <strong>Settings</strong> on your Android device</li>
-            <li>Tap <strong>Google</strong> (or <strong>Google Services</strong>)</li>
-            <li>Tap <strong>Ads</strong></li>
-            <li>Tap <strong>Reset advertising ID</strong> or <strong>Opt out of Ads Personalization</strong></li>
-        </ul>
-    </div>
-
-    <div class="info-box">
-        <p><strong>Important:</strong> Number Merge does not collect or store any personal information such as names, email addresses, or phone numbers on any server. The developer does not have access to your personal data and therefore cannot delete data from Google's services on your behalf. The steps above allow you to directly manage and delete all data associated with the app.</p>
-    </div>
-
-    <h2>Need Help?</h2>
-    <p>If you have any questions about data deletion or need further assistance, please contact us:</p>
-
-    <div class="contact-box">
-        <p><strong>Email:</strong> <a href="mailto:rohanseth567@gmail.com?subject=Data%20Deletion%20Request%20-%20Number%20Merge">rohanseth567@gmail.com</a></p>
-        <p>We will respond to your request within 7 business days.</p>
-    </div>
-
-    <p style="margin-top: 24px; font-size: 13px; color: #888;">For more details about how we handle your data, please read our <a href="https://rohanseth567-cpu.github.io/number-merge-privacy/">Privacy Policy</a>.</p>
-
+  <p class="footer">For more information on how your data is handled, please see our
+     <a href="https://rohanseth567-cpu.github.io/number-merge-privacy/">Privacy Policy</a> and
+     <a href="https://rohanseth567-cpu.github.io/pupdoku-terms/">Terms of Service</a>.</p>
 </div>
-
-<div class="footer">
-    &copy; 2026 Rohan Seth. All rights reserved.
-</div>
-
 </body>
 </html>
